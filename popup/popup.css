@@ -1,0 +1,55 @@
+body{
+	font-family: "Poppins", sans-serif;
+}
+
+h1{
+	font-family: "PoppinsThin", sans-serif;
+	font-size: 3.5em;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+
+#form{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+
+#result span{
+	font-family: "PoppinsBold", sans-serif;
+}
+
+#copyToClipboard{
+	box-sizing: border-box;
+	cursor: pointer;
+	background: #46c5b5;
+	border-radius: 2rem;
+	text-align: center;
+	padding:5px 10px;
+	width: max-content;
+	margin: auto;
+}
+
+input{
+	font-family: "Poppins", sans-serif;
+	border: none;
+	border-bottom: solid black 1px;
+}
+input:not(:valid){
+	border-bottom: solid red 1px;
+}
+
+#tempusBtn{
+	background: #46c5b5;
+	font-size: 1.5em;
+	text-align: center;
+	cursor: pointer;
+	color: white;
+	font-family: "PoppinsBold", sans-serif;
+}
+
+#notif{
+	font-size: 1.7em;
+}
