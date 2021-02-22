@@ -7,6 +7,7 @@
   "icons": {
     "64": "icons/calendar_64.png"
   },
+  "permissions": ["storage"],
   
   "browser_action": {
     "default_icon": "icons/calendar_32.png",

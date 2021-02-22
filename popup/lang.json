@@ -1,0 +1,34 @@
+{
+	"fr":{
+		"name": "français",
+		"calc": "calculer",
+		"sameDates": "Les dates sont identiques",
+		"incorrectDate": "Une date est incorrecte",
+		"d": "jour",
+		"ds": "jour",
+		"m": "mois",
+		"ms": "mois",
+		"y": "années",
+		"ys": "années",
+		"copyToClipboard": "Copier dans le presse-papier",
+		"copied": "copié",
+		"and": "et",
+		"dur": "durée"
+	},
+	"en":{
+		"name": "english",
+		"calc": "calculate",
+		"sameDates": "The dates are the same",
+		"incorrectDate": "A date is incorrect",
+		"d": "day",
+		"ds": "days",
+		"m": "month",
+		"ms": "months",
+		"y": "year",
+		"ys": "years",
+		"copyToClipboard": "Copy to clipboard",
+		"copied": "copied",
+		"and": "and",
+		"dur": "duration"
+	}
+}
