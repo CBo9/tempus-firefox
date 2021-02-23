@@ -7,11 +7,12 @@ browser.storage.local.get('lang', (result) =>{
 	
 	var request = new XMLHttpRequest();
 	request.overrideMimeType("application/json");
-	request.open('GET', 'lang.json', true);
+	request.open('GET', '../data/lang.json', true);
 	request.onreadystatechange = function () {
 		if (request.readyState == 4 && request.status == "200") {
 			const data = JSON.parse(request.responseText);
 
+			
 			if(result.lang != undefined && data[result.lang] != undefined){  //if lang is already defined in storage
 				lang = data[result.lang];
 			}else{

@@ -5,7 +5,7 @@
 		"sameDates": "Les dates sont identiques",
 		"incorrectDate": "Une date est incorrecte",
 		"d": "jour",
-		"ds": "jour",
+		"ds": "jours",
 		"m": "mois",
 		"ms": "mois",
 		"y": "années",
@@ -13,7 +13,9 @@
 		"copyToClipboard": "Copier dans le presse-papier",
 		"copied": "copié",
 		"and": "et",
-		"dur": "durée"
+		"dur": "durée",
+		"lang":"Langue",
+		"options": "Paramètres"
 	},
 	"en":{
 		"name": "english",
@@ -29,6 +31,8 @@
 		"copyToClipboard": "Copy to clipboard",
 		"copied": "copied",
 		"and": "and",
-		"dur": "duration"
+		"dur": "duration",
+		"lang":"Language",
+		"options": "Settings"
 	}
 }

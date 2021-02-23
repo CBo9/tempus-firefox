@@ -13,5 +13,8 @@
     "default_icon": "icons/calendar_32.png",
     "default_title": "Tempus",
     "default_popup": "popup/Tempus.html"
+  },
+  "options_ui": {
+    "page": "options/options.html"
   }
 }
