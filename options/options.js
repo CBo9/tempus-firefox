@@ -49,7 +49,7 @@ function fillOptionsPage(){
 				}
 
 				document.getElementById('options').innerHTML = lang.options;
-				document.querySelector('#lang>label').innerHTML = lang.lang;
+				document.querySelector('#lang>label').innerHTML = lang.lang + ": ";
 			}
 		};
 		request.send();  	
