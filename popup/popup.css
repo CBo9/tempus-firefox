@@ -1,5 +1,6 @@
 body{
 	font-family: "Poppins", sans-serif;
+	padding-top: 10px;
 }
 
 h1{
@@ -48,6 +49,24 @@ input:not(:valid){
 	cursor: pointer;
 	color: white;
 	font-family: "PoppinsBold", sans-serif;
+}
+
+#options{
+	border: solid 2px #000;
+	cursor: pointer;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	border-radius: 50%;
+	padding: 5px;
+}
+
+#options > img{
+	width: 100%;
+	height: 100%;
+	position: relative;
 }
 
 #notif{

@@ -1,4 +1,5 @@
 document.getElementById('tempusBtn').addEventListener('click', tempus);
+document.getElementById('options').addEventListener('click', openOptions);
 
 
 let lang, langID;
@@ -163,3 +164,7 @@ function tempus(){
 	message.append(clipboard);
 }
 
+
+function openOptions(){
+	browser.runtime.openOptionsPage();
+}
