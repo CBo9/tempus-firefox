@@ -47,14 +47,6 @@ function tempus(){
 	let date1 = new Date(input1);
 	let date2 = new Date(input2);
 
-	if(input1 == input2){
-		let resultDiv = document.createElement('p');
-		resultDiv.setAttribute('id', 'result');
-		resultDiv.innerHTML = lang.sameDates;
-		message.append(resultDiv);
-		return;
-	}
-
 	if( isNaN(date1.getTime()) || isNaN(date2.getTime())){
 		let resultDiv = document.createElement('p');
 		resultDiv.setAttribute('id', 'result');
@@ -63,7 +55,13 @@ function tempus(){
 		return;
 	}
 
-
+	if(input1 == input2){
+		let resultDiv = document.createElement('p');
+		resultDiv.setAttribute('id', 'result');
+		resultDiv.innerHTML = lang.sameDates;
+		message.append(resultDiv);
+		return;
+	}
 
 	let diffDays = 0, diffMonths =0 , diffYears = 0;
 

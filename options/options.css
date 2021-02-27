@@ -1,16 +1,12 @@
 body {
-  background: #fff;
-  color: #202023;
   min-height: 100vh;
   font-size: 1.3em;
   font-family: "Poppins", sans-serif;
 }
 
 select{
-  background: #202023;
-  color: #fff;
   border: none;
-  border-bottom: solid 1px #fff;
+  border-bottom: solid 1px #000;
   font-family: "Poppins", sans-serif;
   position: relative;
 }
@@ -39,5 +35,12 @@ option{
   body {
     background: #202023;
     color: #fff;
+  }
+
+  select{
+    background: #202023;
+    color: #fff;
+    border: none;
+    border-bottom: solid 1px #fff;
   }
 }
