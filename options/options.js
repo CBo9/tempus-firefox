@@ -32,7 +32,7 @@ function fillOptionsPage(){
 				const keys = Object.keys(data);
 
 				const select = document.getElementById('lang-select');
-				select.innerHTML = ""; //empties select
+				select.innerText = ""; //empties select
 
 				for(let j = 0; j < i; j++){
 					let key = keys[j];
@@ -40,7 +40,7 @@ function fillOptionsPage(){
 					
 
 					const el = document.createElement('option');
-					el.innerHTML = data[key].name;
+					el.innerText = data[key].name;
 					el.value = key;
 					if(langID == key){
 						el.setAttribute("selected", true);
@@ -48,8 +48,8 @@ function fillOptionsPage(){
 					select.appendChild(el);
 				}
 
-				document.getElementById('options').innerHTML = lang.options;
-				document.querySelector('#lang>label').innerHTML = lang.lang + ": ";
+				document.getElementById('options').innerText = lang.options;
+				document.querySelector('#lang>label').innerText = lang.lang + ": ";
 			}
 		};
 		request.send();  	

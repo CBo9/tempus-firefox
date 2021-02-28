@@ -34,12 +34,12 @@ browser.storage.local.get('lang', (result) =>{
 
 function setPopup(){
 	const button = document.getElementById('tempusBtn');
-	button.innerHTML = lang.calc;
+	button.innerText = lang.calc;
 }
 
 function tempus(){
 	const message = document.getElementById('message');
-	message.innerHTML = "";
+	message.innerText = "";
 
 	let input1 = document.getElementById('inputD1').value;
 	let input2 = document.getElementById('inputD2').value;
@@ -50,7 +50,7 @@ function tempus(){
 	if( isNaN(date1.getTime()) || isNaN(date2.getTime())){
 		let resultDiv = document.createElement('p');
 		resultDiv.setAttribute('id', 'result');
-		resultDiv.innerHTML = lang.incorrectDate;
+		resultDiv.innerText = lang.incorrectDate;
 		message.append(resultDiv);
 		return;
 	}
@@ -58,7 +58,7 @@ function tempus(){
 	if(input1 == input2){
 		let resultDiv = document.createElement('p');
 		resultDiv.setAttribute('id', 'result');
-		resultDiv.innerHTML = lang.sameDates;
+		resultDiv.innerText = lang.sameDates;
 		message.append(resultDiv);
 		return;
 	}
@@ -148,18 +148,22 @@ function tempus(){
 		document.body.removeChild(el);
 
 		const notif = document.getElementById('copyToClipboard');
-		notif.innerHTML = lang.copied;
-		let removeNotif = setTimeout(() => {notif.innerHTML= lang.copyToClipboard}, 2000);
+		notif.innerText = lang.copied;
+		let removeNotif = setTimeout(() => {notif.innerText= lang.copyToClipboard}, 2000);
 
 	});
-	clipboard.innerHTML = lang.copyToClipboard;
+	clipboard.innerText = lang.copyToClipboard;
 
 	let resultDiv = document.createElement('p');
 	resultDiv.setAttribute('id', 'result');
-	resultDiv.innerHTML = `${lang.dur}: <span>${result}.</span>`;
+	resultDiv.innerText = `${lang.dur}: `;
 
-	message.append(resultDiv);	
-	message.append(clipboard);
+	let resultText = document.createElement('span');
+	resultText.innerText = `${result}.`;
+
+	resultDiv.appendChild(resultText);
+	message.appendChild(resultDiv);	
+	message.appendChild(clipboard);
 }
 
 
