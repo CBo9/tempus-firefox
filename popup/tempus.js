@@ -1,9 +1,10 @@
 document.getElementById('tempusBtn').addEventListener('click', tempus);
 document.getElementById('options').addEventListener('click', openOptions);
-
+document.getElementById('inputD1').addEventListener('change', () => { saveEntry(1) });
+document.getElementById('inputD2').addEventListener('change', () => { saveEntry(2) });
 
 let lang, langID;
-browser.storage.local.get('lang', (result) =>{
+browser.storage.local.get(null, (result) =>{
 	var userLang = navigator.language || navigator.userLanguage; //language of the user's browser
 	
 	var request = new XMLHttpRequest();
@@ -26,11 +27,22 @@ browser.storage.local.get('lang', (result) =>{
 				}
 				browser.storage.local.set({"lang": langID});
 			}
+			if(result.input1){
+				document.getElementById('inputD1').value = result.input1;
+			}
+			if(result.input2){
+				document.getElementById('inputD2').value = result.input2;
+			}
+			if(result.input1 && result.input2){
+				tempus();
+			}
 			setPopup();
 		}
 	};
 	request.send();  	
 });
+
+
 
 function setPopup(){
 	const button = document.getElementById('tempusBtn');
@@ -169,4 +181,21 @@ function tempus(){
 
 function openOptions(){
 	browser.runtime.openOptionsPage();
+}
+
+function saveEntry(inputNB){
+	console.log(inputNB);
+	let value = document.getElementById('inputD' + inputNB).value;
+	if(!value){
+		let els = document.querySelectorAll('#message > *');
+		console.log(els);
+		for(let el of els){
+			document.getElementById('message').removeChild(el);
+		}
+	}
+	if(inputNB === 1){
+		browser.storage.local.set({"input1": value });
+	}else{
+		browser.storage.local.set({"input2": value });
+	}	
 }
