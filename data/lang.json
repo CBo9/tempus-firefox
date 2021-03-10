@@ -15,7 +15,9 @@
 		"and": "et",
 		"dur": "durée",
 		"lang":"Langue",
-		"options": "Paramètres"
+		"options": "Paramètres",
+		"source": "code source",
+		"created_by": "crée par"
 	},
 	"en":{
 		"name": "english",
@@ -33,6 +35,8 @@
 		"and": "and",
 		"dur": "duration",
 		"lang":"Language",
-		"options": "Settings"
+		"options": "Settings",
+		"source": "source code",
+		"created_by": "created by"
 	}
 }

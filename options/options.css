@@ -31,6 +31,20 @@ option{
   margin: 0;
 }
 
+footer{
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+#credit:first-letter{
+  text-transform: uppercase;
+}
+
+.link, #versID{
+  color: #ffad1f;
+}
+
 @media (prefers-color-scheme: dark) {
   body {
     background: #202023;

@@ -50,6 +50,17 @@ function fillOptionsPage(){
 
 				document.getElementById('options').innerText = lang.options;
 				document.querySelector('#lang>label').innerText = lang.lang + ": ";
+
+				const credit = document.getElementById('credit');
+				credit.innerText = lang.created_by + " ";
+				let githubLink = document.createElement("a");
+				githubLink.href="https://github.com/CBo9";
+				githubLink.classList.add("link");
+				githubLink.innerText = "CBo9";
+				credit.appendChild(githubLink);
+
+				document.getElementById('versID').innerText = browser.runtime.getManifest().version;
+
 			}
 		};
 		request.send();  	
