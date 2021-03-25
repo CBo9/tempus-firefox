@@ -57,9 +57,13 @@ function fillOptionsPage(){
 				githubLink.href="https://github.com/CBo9";
 				githubLink.classList.add("link");
 				githubLink.innerText = "CBo9";
+				githubLink.target = "_blank";
 				credit.appendChild(githubLink);
 
-				document.getElementById('versID').innerText = browser.runtime.getManifest().version;
+				const version = document.getElementById('versID');
+				version.innerText = browserType.runtime.getManifest().version;
+				version.href = 'https://github.com/CBo9/tempus-firefox/releases/tag/v' + browserType.runtime.getManifest().version;
+				version.target = "_blank";
 
 			}
 		};
