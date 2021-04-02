@@ -2,9 +2,10 @@ document.getElementById('tempusBtn').addEventListener('click', tempus);
 document.getElementById('options').addEventListener('click', openOptions);
 document.getElementById('inputD1').addEventListener('change', () => { saveEntry(1) });
 document.getElementById('inputD2').addEventListener('change', () => { saveEntry(2) });
+const browserType = navigator.userAgent.match(new RegExp('Chrome')) ? chrome : browser;
 
 let lang, langID;
-browser.storage.local.get(null, (result) =>{
+browserType.storage.local.get(null, (result) =>{
 	var userLang = navigator.language || navigator.userLanguage; //language of the user's browser
 	
 	var request = new XMLHttpRequest();
@@ -25,7 +26,7 @@ browser.storage.local.get(null, (result) =>{
 					lang = data["en"];					//else default is english
 					langID = "en";
 				}
-				browser.storage.local.set({"lang": langID});
+				browserType.storage.local.set({"lang": langID});
 			}
 			if(result.input1){
 				document.getElementById('inputD1').value = result.input1;
@@ -180,7 +181,7 @@ function tempus(){
 
 
 function openOptions(){
-	browser.runtime.openOptionsPage();
+	browserType.runtime.openOptionsPage();
 }
 
 function saveEntry(inputNB){
@@ -194,8 +195,8 @@ function saveEntry(inputNB){
 		}
 	}
 	if(inputNB === 1){
-		browser.storage.local.set({"input1": value });
+		browserType.storage.local.set({"input1": value });
 	}else{
-		browser.storage.local.set({"input2": value });
+		browserType.storage.local.set({"input2": value });
 	}	
 }

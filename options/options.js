@@ -1,9 +1,11 @@
+const browserType = navigator.userAgent.match(new RegExp('Chrome')) ? chrome : browser;
+
 document.getElementById('lang-select').addEventListener('change', changeLanguage);
 fillOptionsPage();
 
 function fillOptionsPage(){
 	let lang, langID;
-	browser.storage.local.get('lang', (result) =>{
+	browserType.storage.local.get('lang', (result) =>{
 		var userLang = navigator.language || navigator.userLanguage; //language of the user's browser
 		
 		var request = new XMLHttpRequest();
@@ -24,7 +26,7 @@ function fillOptionsPage(){
 						lang = data["en"];					//else default is english
 						langID = "en";
 					}
-					browser.storage.local.set({"lang": langID});
+					browserType.storage.local.set({"lang": langID});
 				}
 
 
@@ -57,7 +59,7 @@ function fillOptionsPage(){
 				githubLink.href="https://github.com/CBo9";
 				githubLink.classList.add("link");
 				githubLink.innerText = "CBo9";
-				githubLink.target = "_blank";
+				githubLink².target = "_blank";
 				credit.appendChild(githubLink);
 
 				const version = document.getElementById('versID');
@@ -78,6 +80,6 @@ function fillOptionsPage(){
 
 function changeLanguage(){
 	let newLang = document.getElementById('lang-select').value;
-	browser.storage.local.set({"lang": newLang});
+	browserType.storage.local.set({"lang": newLang});
 	fillOptionsPage();
 }
