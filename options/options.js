@@ -59,7 +59,7 @@ function fillOptionsPage(){
 				githubLink.href="https://github.com/CBo9";
 				githubLink.classList.add("link");
 				githubLink.innerText = "CBo9";
-				githubLink².target = "_blank";
+				githubLink.target = "_blank";
 				credit.appendChild(githubLink);
 
 				const version = document.getElementById('versID');

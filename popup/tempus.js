@@ -52,6 +52,7 @@ function setPopup(){
 
 function tempus(){
 	const message = document.getElementById('message');
+	message.classList.remove('error');
 	message.innerText = "";
 
 	let input1 = document.getElementById('inputD1').value;
@@ -63,6 +64,7 @@ function tempus(){
 	if( isNaN(date1.getTime()) || isNaN(date2.getTime())){
 		let resultDiv = document.createElement('p');
 		resultDiv.setAttribute('id', 'result');
+		resultDiv.classList.add('error');
 		resultDiv.innerText = lang.incorrectDate;
 		message.append(resultDiv);
 		return;
@@ -185,11 +187,9 @@ function openOptions(){
 }
 
 function saveEntry(inputNB){
-	console.log(inputNB);
 	let value = document.getElementById('inputD' + inputNB).value;
 	if(!value){
 		let els = document.querySelectorAll('#message > *');
-		console.log(els);
 		for(let el of els){
 			document.getElementById('message').removeChild(el);
 		}
